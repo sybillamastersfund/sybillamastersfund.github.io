@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sybilla Masters Fund</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
+	<!-- fa-icon -->
+	
+	<!--javascript-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  
+  <body>
+<!--nav -->
+  <nav id="navbar" class="navbar">
+  <ul class="nav-menu">
+    <li>
+      <a data-scroll="home" href="#home" class="dot active">
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="process" href="#process" class="dot">
+        <span>About me</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="faq" href="#faq" class="dot">
+        <span>Services</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="test" href="#test" class="dot">
+        <span>Testimonials</span>
+      </a>
+    </li>
+    <li>
+      <a data-scroll="contact" href="#contact" class="dot">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script type="text/javascript">
+$(function() {
+  
+  var link = $('#navbar a.dot');
+  
+  // Move to specific section when click on menu link
+  link.on('click', function(e) {
+    var target = $($(this).attr('href'));
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 600);
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+  
+  // Run the scrNav when scroll
+  $(window).on('scroll', function(){
+    scrNav();
+  });
+  
+  // scrNav function 
+  // Change active dot according to the active section in the window
+  function scrNav() {
+    var sTop = $(window).scrollTop();
+    $('section').each(function() {
+      var id = $(this).attr('id'),
+          offset = $(this).offset().top-1,
+          height = $(this).height();
+      if(sTop >= offset && sTop < offset + height) {
+        link.removeClass('active');
+        $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
+      }
+    });
+  }
+  scrNav();
+});
+</script>
+	
+	<!-- end nav -->
+	
+  <section class="hero">
+        <div class="hero-inner">
+            <h1>We fund women building disruptive technologies</h1>
+
+        </div>
+    </section>
+	
+	<section id = "#about">
+	<div class="text-intro">
+	<h1>Sybilla Masters Fund</h1>
+		<p>The Sybilla Masters Fund is chartered to source, fund, and champion diverse founding teams with at least one woman in a position of strategic and operational control. The Fund is an intentional effort to increase the ability of capable teams comprising all genders and backgrounds to succeed at scalable entrepreneurship and enjoy the bounty of their efforts.</p>
+	</div>
+	</section>
+	
+	<section id = "team">
+	<h1>Meet the Sybilla Masters Team</h1>
+	<p class = "over">The Sybilla Masters Fund was founded by two industry veterans in January 2018.  As two successful trailblazers, we saw the value in investing in women and promoting gender equality in this male dominated Venture Capital Funding landscape. We already knew from our experiences that gender diversity is CRITICAL to entrepreneurial success. We created The Sybilla Masters Fund to focus on collaborating and investing in gender diverse start-ups, with at least one woman in a position of strategic and operational control, which we deem a more risk-intelligent approach to venture capital.  </p>
+	<div class = "container">
+		<h2>General Partners</h2>
+		<div class = "row center">
+			<div class = "col-md-6 col-sm-6">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/gillianMuessig.jpg" alt="team member" class="img-responsive"width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Gillian Muessig</h5>
+            </div>
+			</div>
+			
+			<div class = "col-md-6 col-sm-6">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/anneKennedy.jpg" alt="team member" class="img-responsive" width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Anne Kennedy</h5>
+            </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "container">
+		<h2>Venture Partners & Advisors</h2>
+		<div class = "row center">
+			<div class = "col-md-3 col-sm-3">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/karenCone.jpeg" alt="team member" class="img-responsive"width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Karen Topping Cone</h5>
+            </div>
+			</div>
+			
+			<div class = "col-md-3 col-sm-3">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/carleePrice.jpeg" alt="team member" class="img-responsive" width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Carlee Price</h5>
+            </div>
+			</div>
+			
+			<div class = "col-md-3 col-sm-3">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/yokoOkano.jpeg" alt="team member" class="img-responsive" width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Yoko Okano</h5>
+            </div>
+			</div>
+			
+			<div class = "col-md-3 col-sm-3">
+			<div class="team-member">
+                <div class="team-img">
+                    <img src="images/eileenFoley.png" alt="team member" class="img-responsive" width = "225" height = "250">
+                </div>
+                               
+            </div>
+			<div class="team-title">
+                <h5>Eileen Foley</h5>
+            </div>
+			</div>
+			
+		
+		</div>
+	</div>
+	
+	</section>
+	
+	<section id = "process">
+		<h1> Our Process </h1>
+		
+		<div class = "container">
+			<div class = "row">
+			
+				<div class = "col-md-4">
+				<p style = "font-size: 2 em;">Review</p>
+				</div>
+				
+				<div class = "col-md-4">
+				<p style = "font-size: 2 em;">Invest</p>
+				</div>
+				
+				<div class = "col-md-4">
+				<p style = "font-size: 2 em;">Advise</p>
+				</div>
+			</div>
+		</div>
+		
+		<p class = "over">...And take companies to the next level of funding
+		</br>Our expertise lies in B2B and B2C tech companies. We will look at other business models but will invest only if we have advisors willing and capable of bringing the company to an exit or the next stage of capitalization. We may syndicate funding, taking either a lead or follow-on position. When we lead, we take a Board Seat; when we follow, we or the other investors take a Board Seat to represent the interest of the investors. </p>
+	</section>
+	
+	<section id = "faq">
+		<h1> Sybilla Masters Fund FAQ </h1>
+		<div class="container accordion"> 
+  
+<div class="toggle">
+	<div class="toggle-title ">
+		<h3>
+		<i></i>
+		<span class="title-name">What is the Sybilla Masters Fund?</span>
+		</h3>
+	</div>
+	<div class="toggle-inner">
+		<p>A gender lens Venture Capital Fund chartered to support, fund, and champion high-potential technology-driven businesses with at least one woman on the founding team in a position of strategic and operational control. </p>
+	</div>
+	</div><!-- END OF TOGGLE -->
+	
+	
+	<div class="toggle">
+		<div class="toggle-title ">
+			<h3>
+			<i></i>
+			<span class="title-name">Can male founders apply? </span>
+			</h3>
+		</div>
+		
+		<div class="toggle-inner">
+			<p>Yes, so long as there is one woman in a position of strategic and operational control, appropriately titled and compensated. </p>
+		</div>
+		</div><!-- END OF TOGGLE -->
+		
+		<div class="toggle">
+			<div class="toggle-title  ">
+				<h3>
+				<i></i>
+				<span class="title-name"> What about ethnic, racial, age, or ability diversity? </span>
+				</h3>
+			</div>
+			
+			<div class="toggle-inner">
+				<p>We encourage diversity across all sectors, as increasing volumes of evidence demonstrate that it promotes resiliency and improved financial success. We have elected to focus on gender diversity, but we collaborate with, support, and syndicate funding with other Funds focused on many elements of human diversity, inclusion, and belonging in technology and entrepreneurship. </p>
+			</div>
+			
+			</div><!-- END OF TOGGLE -->
+			
+  
+  
+		<div class="toggle">
+			<div class="toggle-title  ">
+				<h3>
+				<i></i>
+				<span class="title-name">What is the business argument for gender diversity? </span>
+				</h3>
+			</div>
+			
+			<div class="toggle-inner">
+				<p>Numerous studies confirm that companies with diversity in the senior management team prove stronger and more sustainable in the market. First Round Capital’s Ten-Year Study reported that women led companies returned an average of 63% higher ROI to their portfolio. An increasing number of studies reports increased gross margins, reduced customer churn, improved corporate governance, less fraud and other legal entanglements, all of which results in improved investor returns in both private and public sectors. </p>
+			</div>
+			
+			</div><!-- END OF TOGGLE -->
+			
+  
+  
+		<div class="toggle">
+			<div class="toggle-title ">
+				<h3>
+				<i></i>
+				<span class="title-name">Why buck the traditional Venture Capital model? </span>
+				</h3>
+			</div>
+			
+			<div class="toggle-inner">
+				<p>The traditional Venture focuses on funding the software that will power the ‘next big thing.’ Today, the lion’s share of Venture Capital is being invested in IoT, blockchain, Augmented and Virtual Reality, and Artificial Intelligence. The process entails a large number of investments with the expectation that one or two successful exits will return outsized returns, covering the losses for twenty to forty or more unprofitable or inadequately profitable liquidity events. 80% - 90% of venture funding in the United States still goes to male, Caucasian founders, most of whom have attended Harvard or Stanford. 
+ </br>
+With such a strong focus on such a small sub-group of founders and technologies, we believe that sector is over-invested and is prone to inflated valuations. The deal sourcing, investment premise, and funding process remain largely unchanged in venture capital for 25+ years. 
+ </br>
+The Sybilla Masters Fund addresses these critical issues. In addition to funding potential ‘Unicorns’ in the technology sector, we invest in companies that demonstrate the ability to provide investors with shorter term 2 – 7x exits. We utilize equity, debt, revenue-sharing, and hybrid model investment instruments designed to meet the more complex business building opportunities and return higher ROI to our investors. 
+</p>
+			</div>
+			
+			</div><!-- END OF TOGGLE -->
+			
+  
+  
+  
+		<div class="toggle">
+			<div class="toggle-title">
+				<h3>
+				<i></i>
+				<span class="title-name">What’s your investment rubric and engagement process?</span>
+				</h3>
+			</div>
+			
+			<div class="toggle-inner">
+				<p>Our intentional deal sourcing, stringent due diligence process, relevant funding vehicles, and strict tracking and reporting requirements increase success for both investors and founders. 
+				<ul>
+					<li>We optimize investor returns by seeking high quality deal flow in underinvested sectors and teams. </li>
+					<li>We structure investments for optimal value to both investors and entrepreneurs, providing short term smaller exits that power longer term ‘big win’ exits. </li>
+					<li>We partner with later stage VCs during our due diligence process and keep interested VCs informed at every benchmark. This establishes strong paths to Series B funding for our portfolio companies that require it. </li>
+				</ul>
+				</p>
+			</div>
+			
+			</div><!-- END OF TOGGLE -->
+			
+			
+  
+  		<div class="toggle">
+			<div class="toggle-title ">
+				<h3>
+				<i></i>
+				<span class="title-name">Who can invest?</span>
+				</h3>
+			</div>
+			
+			<div class="toggle-inner">
+				<p>Qualified individuals, wealth managers, and corporations. 
+ </br>
+Join Us! We welcome corporate, institutional, Private Family Offices, and individual Qualified Purchaser investors. Please contact us [link to contact page] 
+</p>
+			</div>
+			
+			</div><!-- END OF TOGGLE -->
+  
+  
+		</div>
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script type="text/javascript">
+if (jQuery(".toggle .toggle-title").hasClass("active")) {
+  jQuery(".toggle .toggle-title.active")
+    .closest(".toggle")
+    .find(".toggle-inner")
+    .show();
+}
+jQuery(".toggle .toggle-title").click(function() {
+  if (jQuery(this).hasClass("active")) {
+    jQuery(this)
+      .removeClass("active")
+      .closest(".toggle")
+      .find(".toggle-inner")
+      .slideUp(200);
+  } else {
+    jQuery(this)
+      .addClass("active")
+      .closest(".toggle")
+      .find(".toggle-inner")
+      .slideDown(200);
+  }
+});
+</script>
+
+	</section>
+	
+  </body>
