@@ -73,7 +73,7 @@ h2 {
     text-align: center;
 	
 	/* background styles */
-	background-image: url('https://i.ibb.co/WPqfRt8/hero-image.jpg');
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/hero.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -82,7 +82,8 @@ h2 {
 
 .hero h1 {
     /* Text styles */
-    font-size: 5em;
+    font-size: 4em;
+	color: white;
     
     /* Margins */
     margin-top: 0;
@@ -90,6 +91,9 @@ h2 {
 	
 }
 
+.hero img {
+	text-align: center;
+}
 #process {
 	padding-top: 5%;
 	padding-bottom: 5%;
