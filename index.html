@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	
 	<!-- fa-icon -->
-	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<!--javascript-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
@@ -25,80 +25,12 @@
   
   <body>
 <!--nav -->
-  <nav id="navbar" class="navbar">
-  <ul class="nav-menu">
-    <li>
-      <a data-scroll="home" href="#home" class="dot active">
-        <span>Home</span>
-      </a>
-    </li>
-    <li>
-      <a data-scroll="process" href="#process" class="dot">
-        <span>About me</span>
-      </a>
-    </li>
-    <li>
-      <a data-scroll="faq" href="#faq" class="dot">
-        <span>Services</span>
-      </a>
-    </li>
-    <li>
-      <a data-scroll="test" href="#test" class="dot">
-        <span>Testimonials</span>
-      </a>
-    </li>
-    <li>
-      <a data-scroll="contact" href="#contact" class="dot">
-        <span>Contact</span>
-      </a>
-    </li>
-  </ul>
-</nav>
 
-<script type="text/javascript">
-$(function() {
-  
-  var link = $('#navbar a.dot');
-  
-  // Move to specific section when click on menu link
-  link.on('click', function(e) {
-    var target = $($(this).attr('href'));
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 600);
-    $(this).addClass('active');
-    e.preventDefault();
-  });
-  
-  // Run the scrNav when scroll
-  $(window).on('scroll', function(){
-    scrNav();
-  });
-  
-  // scrNav function 
-  // Change active dot according to the active section in the window
-  function scrNav() {
-    var sTop = $(window).scrollTop();
-    $('section').each(function() {
-      var id = $(this).attr('id'),
-          offset = $(this).offset().top-1,
-          height = $(this).height();
-      if(sTop >= offset && sTop < offset + height) {
-        link.removeClass('active');
-        $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
-      }
-    });
-  }
-  scrNav();
-});
-</script>
-	
 	<!-- end nav -->
 	
   <section class="hero">
         <div class="hero-inner">
             <h1>We fund women building disruptive technologies</h1>
-
         </div>
     </section>
 	
@@ -125,32 +57,34 @@ $(function() {
 		</div>
 	</section>
 	<section id = "team">
+	<div style = "text-align: center;">
 	<h1>Meet the Sybilla Masters Team</h1>
 	<p class = "over">The Sybilla Masters Fund was founded by two industry veterans in January 2018.  As two successful trailblazers, we saw the value in investing in women and promoting gender equality in this male dominated Venture Capital Funding landscape. We already knew from our experiences that gender diversity is CRITICAL to entrepreneurial success. We created The Sybilla Masters Fund to focus on collaborating and investing in gender diverse start-ups, with at least one woman in a position of strategic and operational control, which we deem a more risk-intelligent approach to venture capital.  </p>
+	</div>
 	<div class = "container">
 		<h2>General Partners</h2>
 		<div class = "row center">
 			<div class = "col-md-6 col-sm-6">
 			<div class="team-member">
-                <div class="team-img">
-                    <img src="images/gillianMuessig.jpg" alt="team member" class="img-responsive"width = "225" height = "250">
+                <div  class="team-img">
+                    <img src="images/gillianMuessig.jpg" alt="team member" class="img-responsive"width = "200" height = "200">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Gillian Muessig</h5>
+                <h5><a class = "btn" href="#gillian" >Gillian Muessig</a></h5>
             </div>
 			</div>
 			
 			<div class = "col-md-6 col-sm-6">
 			<div class="team-member">
                 <div class="team-img">
-                    <img src="images/anneKennedy.jpg" alt="team member" class="img-responsive" width = "225" height = "250">
+                    <img src="images/anneKennedy.jpg" alt="team member" class="img-responsive" width = "200" height = "200">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Anne Kennedy</h5>
+                <h5><a class = "btn" href="#anne" >Anne Kennedy</a></h5>
             </div>
 			</div>
 		</div>
@@ -159,51 +93,51 @@ $(function() {
 	<div class = "container">
 		<h2>Venture Partners & Advisors</h2>
 		<div class = "row center">
-			<div class = "col-md-3 col-sm-3">
+			<div style = "text-align: center" class = "col-md-3 col-sm-3">
 			<div class="team-member">
                 <div class="team-img">
-                    <img src="images/karenCone.jpeg" alt="team member" class="img-responsive"width = "225" height = "250">
+                    <img src="images/karenCone.jpeg" alt="team member" class="img-responsive"width = "160" height = "160">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Karen Topping Cone</h5>
+                <h5 style = "text-align: center;"><a class = "btn" href="#karen">Karen Topping Cone</a></h5>
             </div>
 			</div>
 			
 			<div class = "col-md-3 col-sm-3">
 			<div class="team-member">
                 <div class="team-img">
-                    <img src="images/carleePrice.jpeg" alt="team member" class="img-responsive" width = "225" height = "250">
+                    <img src="images/carleePrice.jpeg" alt="team member" class="img-responsive" width = "160" height = "160">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Carlee Price</h5>
+                <h5 style = "text-align: center"><a class = "btn" href="#carlee">Carlee Price</a></h5>
             </div>
 			</div>
 			
 			<div class = "col-md-3 col-sm-3">
 			<div class="team-member">
                 <div class="team-img">
-                    <img src="images/yokoOkano.jpeg" alt="team member" class="img-responsive" width = "225" height = "250">
+                    <img src="images/yokoOkano.jpeg" alt="team member" class="img-responsive" width = "160" height = "160">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Yoko Okano</h5>
+                <h5><a class = "btn" href="#yoko">Yoko Okano</a></h5>
             </div>
 			</div>
 			
 			<div class = "col-md-3 col-sm-3">
 			<div class="team-member">
                 <div class="team-img">
-                    <img src="images/eileenFoley.png" alt="team member" class="img-responsive" width = "225" height = "250">
+                    <img src="images/eileenFoley.png" alt="team member" class="img-responsive" width = "160" height = "160">
                 </div>
                                
             </div>
 			<div class="team-title">
-                <h5>Eileen Foley</h5>
+                <h5><a class = "btn" href="#eileen">Eileen Foley</a></h5>
             </div>
 			</div>
 			
@@ -211,28 +145,154 @@ $(function() {
 		</div>
 	</div>
 	
+	<!-- modals -->
+		<!-- gillian -->
+	<div style = "text-align:center;" id="gillian" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/gillianMuessig.jpg">
+    <h1>Gillian Muessig</h1>
+    <div>Gillian Muessig is a gender lens Venture Capital Fund manager and impact investor. She co-founded and helped build SEOmoz (now Moz.com) from inception to become the world's leading provider of marketing applications and metrics software and the global hub for digital marketers. She co-founded and served as COO and board chair of brettapproved – Tripadvisor for travelers with disabilities and mobility challenges and is the CEO of Outlines Venture Group. A thought leader in early tech Investment, keynote speaker, and author, Gillian enjoys a global reputation for her ability to identify trends in technology across established and emerging markets. She serves on boards of directors and advisors of technology, biotech and marketing firms on four continents and has served on the Tech Advisory Board to the Bill and Melinda Gates Foundation. Over the course of her career, Gillian has helped more than one thousand companies to launch, grow, pivot and thrive. Gillian is the co host of CEOcoach podcast and has been featured in publications in APAC, The Americas, and EMEA.</div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/gillianmuessig/"><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+
+		<!-- anne -->
+			<div style = "text-align:center;" id="anne" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/anneKennedy.jpg">
+    <h1>Anne Kennedy</h1>
+    <div>International author, speaker, and counselor to multinational brands on global digital marketing, Anne Kennedy is a serial entrepreneur with decades of experience in online and offline brand launch, engagement, and public relations. Anne founded her company Beyond Ink in 1997, working with Hearst Newspapers, Philips Lifeline, Dunkin Donuts and other household-name brands online. Her best known work includes the online launches of dot-com giants Zillow, Jib-Jab and Avvo. In 2012, she co-authored the first book on international digital marketing, Global Search Engine Marketing (Pearson Que Biz Tech), and formed the world's largest consortium of multilingual digital marketing companies, putting native-speaking teams on the ground in 50 countries and 20 languages. Anne was a founding Board Director at Helium.com, acquired by publishing giant R.R. Donnelly. She has served on advisory boards at Search Engine Strategies conferences, TechMaine, and at tech startups in the US, India, Scandinavia, and Europe. She is co-host of the weekly radio podcast, CEO Coach, and mentors at Ben Franklin Tech Partners in Philadelphia.</div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/annefkennedy/"><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+		<!-- karen-->
+			<div style = "text-align:center;" id="karen" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/karenCone.jpeg">
+    <h1>Karen Topping Cone</h1>
+    <div>Karen Cone is a proven global business leader and a recognized change agent, advising the Boards of innovative FinTech, software and consulting firms. In her career, Karen has served as General Manager of the Worldwide Financial Services Sector at Microsoft, CEO of the advisory research firm TowerGroup, and a senior executive at brand name organizations, including MasterCard, Gartner and IBM – where Karen was a part of the market-opening teams in Russia (then the Soviet Union) and China. She has served as Executive Director on two Boards and inspires audiences speaking on emerging trends, financial services, RegTech and digital transformation. Karen has led organizations in the Americas, EMEA & Asia and lived in eight countries. She joins the Venture Partners at the Sybilla Masters in 2019. </div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/karencone/"><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+		<!--carlee -->
+			<div style = "text-align:center;" id="carlee" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/carleePrice.jpeg">
+    <h1>Carlee Price</h1>
+    <div>Carlee’s career is marked by extensive experience in fiduciary roles on Wall Street.Since transitioning to Private Equity and Angel Investing in 2013, she has served as due diligence lead on many seed-stage deals, as well as Advisory Board member and interim CFO. A frequent speaker, panelist, and pitch competition judge, Carlee is a CFA charter holder, has completed Data Science coursework at the Master’s level at UC Berkeley and is an avid endurance runner. Carlee serves as a Venture Partner and CFO at the Sybilla Masters Fund.</div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/carleeprice/ "><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+		<!-- yoko -->
+			<div style = "text-align:center;" id="yoko" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/yokoOkano.jpeg">
+    <h1>Yoko Okano</h1>
+    <div>Yoko Okano took a non-traditional path to tech and startups, studying music history at Stanford and playing Taiko (Japanese drums) professionally before joining Google. In her 8 years at Google, she worked in operations and strategic partnership roles for AdWords, Book Search, News, and Google Play where, in addition to launching Google's ebook business in 13+ countries, she managed partnerships with comic book publishers, the fastest growing ebook vertical for the organization. Since leaving Google, Yoko has jumped into opportunities that allow her to be on both sides of the startup fundraising table, as a product leader for 2 startups, and most recently as the fund manager for the 14th round of the Seattle Angel Conference, which aims to spark more angel funding in the Pacific Northwest. Yoko joins the Sybilla Masters Fund as a venture partner. </div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/yokookano/ "><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+		<!--eileen -->
+			<div style = "text-align:center;" id="eileen" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <img width = "150" height = "150"src = "images/eileenFoley.png">
+    <h1>Eileen Foley</h1>
+    <div>Eileen brings close to 20 years of experience in senior positions with high tech banking & financial institutions and software  companies,   including Citibank, Bank of Ireland, First-e Bancorp – Europe’s first internet Bank, Cognotec, and Finastra  before bringing her family to live in Seattle in 2009. She serves in lead roles on numerous committees and Boards for local non-profits. She leverages her areas of expertise in banking, technology and enterprise-focused software companies as well as superb organizational management skills at the Sybilla Masters Fund in due diligence, advising, and fund management. </div>
+    <a style = "font-size: 300%;" href="https://www.linkedin.com/in/eileenfoley/ "><i class="fab fa-linkedin"></i></a>
+	</div>
+	</div>
+	
 	</section>
 	
+	
+	<!-- our story -->
+	<section class="banner">
+        <div class="banner-inner">
+            <h1>About Us</h1>
+        </div>
+    </section>
+	<div class = "history">
+
+	<h1> Sybilla Masters: The Story Behind Our Name </h1>
+	<p> In 1812, Sybilla Masters sailed with the permission of her husband from Philadelphia harbor to London to pursue a patent for her invention, a
+method of curing and processing corn into what would become known as grits. The patent process took three years, during which Sybilla
+opened a millinery shop, where she invented a process for creating straw hats from palmetto leaves and cornered the market. In 1715, King
+George I of England awarded the first to a person residing in America to Thomas Masters to her husband, Thomas Masters, as women were
+prevented by law from holding patents. At Thomas’ insistence, the king had the patent read, “...for a new invention found out by Sybilla, his
+wife.” So did the second patent for Palmetto-leaf straw hats. And Sybilla made her husband a very wealthy man.</p>
+	</br>
+	<p>It takes both men and women to set things right and both genders benefit when everyone is equally supported and rewarded in their efforts to
+build new and better products and processes. But for Thomas, Sybilla Masters, like so many women, would have been lost to history. For far
+too long, women and people of many diverse backgrounds have been intentionally excluded from the activities of invention, business, and the
+ownership and rewards of their own work. The Sybilla Masters Fund is chartered to source, fund, and champion diverse founding teams with
+at least one woman in a position of strategic and operational control. </p>
+	</br>
+	<p> Today, women continue to be badly hampered in scaling their businesses by a severe lack of capital. Merely 2.19% of all venture capital money
+was awarded to women in 2017. In 2018, the number slipped to 2%. We aim to change that by launching a $100MM fund chartered to fund
+capable female founders building high potential, scalable corporations.</p>
+
+
+</div>
+	
+	
+	<!-- end our story -->
+	
 	<!-- quotes -->
-	<div class = "container">
+	<div style = "padding-top: 5%; padding-bottom: 5%;" class = "container">
 		<h1> Diverse Funding Teams Deliver Higher ROI</h1>
 		<div class = "row">
-			<div class = "col-md-6">
+			<div class = "col-md-3">
 				 <blockquote><p class="quotation"> 
-  No doubt one may quote history to support any cause, as the devil quotes scripture.</p>
+ Startups with at
+least one woman on the team returned 63% higher ROI to their portfolio.</p>
+<footer>— First Round Capital</footer>
+</blockquote> 
+			</div>
+			<div class = "col-md-3">
+				 <blockquote><p class="quotation"> 
+  Companies with women at the helm perform three times better than the S&amp;P.</p>
+<footer>— Fortune</footer>
+</blockquote> 
+			</div>
+			<div class = "col-md-3">
+				 <blockquote><p class="quotation"> 
+  Diverse teams are returning higher ROI   than   homogeneous teams</p>
+<footer>— McKinsey & Company</footer>
+</blockquote> 
+			</div>
+			<div class = "col-md-3">
+				 <blockquote><p class="quotation"> 
+ All of my returns, have come from the ones run by women or owned by women</p>
 <footer>— Kevin O' Leary, Sharktank</footer>
 </blockquote> 
 			</div>
 		</div>
+		<p> We believe that diversity on corporate leadership teams is a proxy for the willingness and ability to listen to and act on diverse ideas. It makes
+companies more resilient and better able to acquire new markets more quickly and efficiently. </p>
+	
 	</div>
 	
-	
+	<!-- more female founders colorblock -->
+	<div style = "padding-top: 5%; padding-bottom: 5%; "class = "more">
+	<h1>More Female Funders, More Women Funded </h1>
+	<p>We are committed to help financially qualified women to become experts at investing in this asset class. To that end, we have obtained
+commitments from venture capital firms to host our investors for a review session in their offices. You will see what questions are asked and
+how investment decisions are made by later stage venture capitalists. Once you know what is required at the next stage of funding by a variety
+of VCs, you will be prepared to review your own portfolio of investments with confidence.</p>
+
+	</div>
 	<!-- stats -->
-	<h1> Our Investment Thesis: Find Unicorns in Uncrowded Fields </h1>
-	<div class = "container">
-		<div class = "row">
+	<h1 style = "padding-top: 5%;"> Our Investment Thesis: Find Unicorns in Uncrowded Fields </h1>
+	<div style = "padding-bottom: 5%;"class = "container">
+		<div style = "text-align: center;" class = "row">
 			<div class = "col-md-6 col-sm-6">
-			<svg viewBox="0 0 36 36" class="circular-chart orange">
+			<svg  style = "display:block;" viewBox="0 0 56 56" preserveAspectRatio="xMaxYMax meet" class="circular-chart orange">
 				<path class="circle-bg"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
@@ -246,25 +306,25 @@ $(function() {
       />
       <text x="18" y="20.35" class="percentage">97%</text>
     </svg>
-	<p> More than 97% of funding at the Seed, Series A and stages beyond is controlled by – and funds – all-male, largely Caucasian, teams.</p>
+	<p style = "margin-top: -10%;"> More than 97% of funding at the Seed, Series A and stages beyond is controlled by – and funds – all-male, largely Caucasian, teams.</p>
 			</div>
 			
 			<div class = "col-md-6 col-sm-6">
-			<svg viewBox="0 0 36 36" class="circular-chart green">
+			<svg viewBox="0 0 56 56" class="circular-chart green">
       <path class="circle-bg"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />
       <path class="circle"
-        stroke-dasharray="63, 100"
+        stroke-dasharray="51, 100"
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
       />
-      <text x="18" y="20.35" class="percentage">63%</text>
+      <text x="18" y="20.35" class="percentage">51%</text>
     </svg>
-	<p>Fifty-one percent of these funded teams graduate from Stanford and Harvard.</p>
+	<p style = "margin-top: -10%;">Fifty-one percent of these funded teams graduate from Stanford and Harvard.</p>
 			</div>
 		</div>
 		<p>That makes funding of all-male founders from these schools a very crowded space. 
@@ -272,33 +332,43 @@ The most valuable deals are often funded in &#39;closed door&#39; private deals 
 access to &#39;A&#39; grade deals. At the same time, &#39;A&#39; grade deals are being overlooked in underserved locations, founding teams, and market sectors, providing an
 opportunity for higher ROI.</p>
 	</div>
+	<div id = "gender">
+		<h1> Gender Lens Investing Informs Our Review Process  </h1>
+		<p> Second, we use gender lens investing to bring additional, valuable information to the investment decision. Gender lens investing is the deliberate integration of gender analysis into investment analysis and decision making. Such intentional investing is not only about funding women, but about looking at deals with an understanding of gender bias in ideas and processes. When we are aware of our bias, we make better investment decisions.  </p>
+	</div>
 	
-	<section id = "process">
+	<div id = "process">
 		<h1> Our Process </h1>
 		
 		<div class = "container">
-			<div class = "row">
+			<div style = "text-align: center; padding-top: 3%; padding-bottom: 3%;"class = "row">
 			
 				<div class = "col-md-4">
-				<p style = "font-size: 2 em;">Review</p>
+				<img style = "width: 100px; height: 100px;" src = "images/review.png" alt = "review icon">
+				<h5 style = "font-size: 2 em;">Review</h5>
 				</div>
 				
 				<div class = "col-md-4">
-				<p style = "font-size: 2 em;">Invest</p>
+				<img style = "width: 100px; height: 100px;" src = "images/investment.png" alt = "investment icon">
+				<h5 style = "font-size: 2 em;">Invest</h5>
 				</div>
 				
 				<div class = "col-md-4">
-				<p style = "font-size: 2 em;">Advise</p>
+				<img style = "width: 100px; height: 100px;" src = "images/advise.png" alt = "advise icon">
+				<h5 style = "font-size: 2 em;">Advise</h5>
 				</div>
 			</div>
 		</div>
 		
 		<p class = "over">...And take companies to the next level of funding
 		</br>Our expertise lies in B2B and B2C tech companies. We will look at other business models but will invest only if we have advisors willing and capable of bringing the company to an exit or the next stage of capitalization. We may syndicate funding, taking either a lead or follow-on position. When we lead, we take a Board Seat; when we follow, we or the other investors take a Board Seat to represent the interest of the investors. </p>
-	</section>
+	</div>
 	
-	<section id = "faq">
-		<h1> Sybilla Masters Fund FAQ </h1>
+	
+
+	
+	<section style = "background-color: #EEEEEE; padding-top: 5%; "id = "faq">
+		<h1 style = "margin-bottom: -8%;"> Sybilla Masters Fund FAQ </h1>
 		<div class="container accordion"> 
   
 <div class="toggle">
@@ -449,14 +519,15 @@ jQuery(".toggle .toggle-title").click(function() {
 
 	</section>
 	
-	<section id = "contact">
+	<section style = "padding-top: -10%; padding-bottom: 5%;" id = "contact">
+	<h1 style = "padding-top: -10%;">Contact Us </h1>
 		<div class = "container contact">
 			<div class = "row">
-				<div class = "col-md-6 investors">
+				<div style = "text-align: center;" class = "col-md-6 investors">
 					<h1>For Investors</h1>
 					<p>Join Us! We are changing the stars for female founders and their teams.
 					</br> We welcome corporate, institutional, private family office, and individual qualified investors.</p>
-					<button class = "btn btn-danger">Investors</button>
+					<button class = "btn btn-danger">Contact</button>
 				</div>
 				<div class = "col-md-6">
 					<h1> For Founders & Entrepreneurs </h1>
@@ -464,31 +535,36 @@ jQuery(".toggle .toggle-title").click(function() {
 						<p><ul>
 							<li>diverse teams, with at least one woman in a position of strategic and operational control</li>
 							<li>global deal flow</li>
-							<li>unicorns in uncrowded spaces</li>
+							<li>unicorns in uncrowded spaces</li> 
 						</ul></p>
-						
-						</br></p> If your company fits the above, please contact us using the form below.</p>
-					<button class = "btn btn-danger">Contact</button>
+						<p> If your company fits the above, please contact us using the form below.</p>
+					<div style = "text-align: center;"><button class = "btn btn-danger">Contact</button></div>
 				</div>
 			</div>	
 		</div>
 	</section>
-	<!--
+	
+<!-- footer 
 	<section id = "footer">
-	<div class = "footer">
-	<p> Get in touch with us <p>
-	<div class="social-icons">
-            <a href="https://www.linkedin.com/in/samprikta-basu/">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/sampossible">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-	</div>
+		<div class="container-fluid navbar-fixed-bottom" id="contact-bar">
+  <p>SYBILLA MASTERS FUND | A global gender-lens investment fund | SEATTLE, PHILADELPHIA</p>
+  <div class = "table">
+  <ul class="list-inline text-center">
+    <li>
+      <a style = "display:inline;" href="https://www.linkedin.com/company/sybilla-masters-fund/"><i class="fab fa-linkedin"></i></a>
+    </li>
+    <li>
+      <a style = "display:inline;"href="https://twitter.com/FundSybilla"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li>
+      <a style = "display:inline;"href="partners@sybillamasters.com"><i class="fa fa-envelope"></i></a>
+    </li>
+    
+  </ul>
+  </div>
+  <p style = "font-style: italic;"> Copyright Sybilla Masters Fund. Website Copyright Q3, 2018. All rights reserved</p>
+</div>
 	</section>
-	-->
   </body>
+  
+  -->
