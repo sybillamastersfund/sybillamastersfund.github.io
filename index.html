@@ -29,35 +29,55 @@
 	<!-- end nav -->
 	
   <section class="hero">
-        <div class="hero-inner">
-            <h1>We fund women building disruptive technologies</h1>
+        <div class="container">
+			<div class = "row">
+			<div style = "text-align: left;" class = "col-md-6 col-sm-6">
+				<img src = "images/logo.png" width = "350" height = "275"alt "sybilla masters fund logo">
+			</div>
+			<div class = "col-md-6 col-sm-6">
+				<ul class = "navbar">
+					<li>
+						<a href = "#">Home</a>
+					</li>
+					<li>
+						<a href = "#portfolio">Portfolio</a>
+					</li>
+					<li>
+						<a href = "#team">Team</a>
+					</li>
+					<li>
+						<a href = "#about-us">About</a>
+					</li>
+					<li>
+						<a href = "#">News</a>
+					</li>
+					<li>
+						<a href = "faq.html">FAQ</a>
+					</li>
+					<li>
+						<a href = "#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<h1 class = "hero-inner">We fund women building disruptive technologies</h1>
         </div>
     </section>
 	
-	<section id = "#about">
+	<section id = "">
 	<div class="text-intro">
 	<h1>Sybilla Masters Fund</h1>
 		<p>The Sybilla Masters Fund is chartered to source, fund, and champion diverse founding teams with at least one woman in a position of strategic and operational control. The Fund is an intentional effort to increase the ability of capable teams comprising all genders and backgrounds to succeed at scalable entrepreneurship and enjoy the bounty of their efforts.</p>
 	</div>
 	</section>
-	<section id = "about_us_stats">
-		<div class = "container"> 
-			<div class = "row">
-				<div class = "col-md-3 col-sm-4">
-				<img src = "" alt = "">
-				<h1> </h1>
-				</div>
-				
-				<div class = "col-md-4 col-sm-4">
-				<img src = "" alt = "">
-				<h1></h1>
-				</div>
-			</div>
-		
-		</div>
+
+	<section style = "padding-top: 5%;
+	padding-bottom: 5%;" id = "#portfolio" class = "blue">
+		<h1>Portfolio</h1>
 	</section>
+	
 	<section id = "team">
-	<div style = "text-align: center;">
+	<div>
 	<h1>Meet the Sybilla Masters Team</h1>
 	<p class = "over">The Sybilla Masters Fund was founded by two industry veterans in January 2018.  As two successful trailblazers, we saw the value in investing in women and promoting gender equality in this male dominated Venture Capital Funding landscape. We already knew from our experiences that gender diversity is CRITICAL to entrepreneurial success. We created The Sybilla Masters Fund to focus on collaborating and investing in gender diverse start-ups, with at least one woman in a position of strategic and operational control, which we deem a more risk-intelligent approach to venture capital.  </p>
 	</div>
@@ -92,8 +112,8 @@
 	
 	<div class = "container">
 		<h2>Venture Partners & Advisors</h2>
-		<div class = "row center">
-			<div style = "text-align: center" class = "col-md-3 col-sm-3">
+		<div class = "row center" style = "text-align: center;">
+			<div class = "col-md-3 col-sm-3">
 			<div class="team-member">
                 <div class="team-img">
                     <img src="images/karenCone.jpeg" alt="team member" class="img-responsive"width = "160" height = "160">
@@ -101,7 +121,7 @@
                                
             </div>
 			<div class="team-title">
-                <h5 style = "text-align: center;"><a class = "btn" href="#karen">Karen Topping Cone</a></h5>
+                <h5><a class = "btn" href="#">Karen Topping Cone</a></h5>
             </div>
 			</div>
 			
@@ -113,7 +133,7 @@
                                
             </div>
 			<div class="team-title">
-                <h5 style = "text-align: center"><a class = "btn" href="#carlee">Carlee Price</a></h5>
+                <a class = "btn" href="#carlee"><h5>Carlee Price</h5></a>
             </div>
 			</div>
 			
@@ -209,17 +229,33 @@
 	</div>
 	
 	</section>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(".btn").click(function(){
+  $(".modal-window").addClass("visible");
+});
+
+$(".modal-close").click(function(){
+  $(".modal").removeClass("visible");
+});
+		$(document).click(function(event) {
+  //if you click on anything except the modal itself or the "open modal" link, close the modal
+  if (!$(event.target).closest(".modal-window,.btn").length) {
+    $("body").find(".modal-window").removeClass("visible");
+  }
+});
+	</script>
 	
 	
 	<!-- our story -->
-	<section class="banner">
+	<section id = "about-us"class="banner">
         <div class="banner-inner">
             <h1>About Us</h1>
+			<h3 style = "color: white;"> Sybilla Masters: The Story Behind Our Name </h3>
         </div>
     </section>
+	
 	<div class = "history">
-
-	<h1> Sybilla Masters: The Story Behind Our Name </h1>
 	<p> In 1812, Sybilla Masters sailed with the permission of her husband from Philadelphia harbor to London to pursue a patent for her invention, a
 method of curing and processing corn into what would become known as grits. The patent process took three years, during which Sybilla
 opened a millinery shop, where she invented a process for creating straw hats from palmetto leaves and cornered the market. In 1715, King
@@ -237,13 +273,13 @@ at least one woman in a position of strategic and operational control. </p>
 was awarded to women in 2017. In 2018, the number slipped to 2%. We aim to change that by launching a $100MM fund chartered to fund
 capable female founders building high potential, scalable corporations.</p>
 
-
 </div>
 	
 	
 	<!-- end our story -->
 	
 	<!-- quotes -->
+	<section class = "orange1">
 	<div style = "padding-top: 5%; padding-bottom: 5%;" class = "container">
 		<h1> Diverse Funding Teams Deliver Higher ROI</h1>
 		<div class = "row">
@@ -277,6 +313,7 @@ least one woman on the team returned 63% higher ROI to their portfolio.</p>
 companies more resilient and better able to acquire new markets more quickly and efficiently. </p>
 	
 	</div>
+	</section>
 	
 	<!-- more female founders colorblock -->
 	<div style = "padding-top: 5%; padding-bottom: 5%; "class = "more">
@@ -360,174 +397,84 @@ opportunity for higher ROI.</p>
 			</div>
 		</div>
 		
-		<p class = "over">...And take companies to the next level of funding
-		</br>Our expertise lies in B2B and B2C tech companies. We will look at other business models but will invest only if we have advisors willing and capable of bringing the company to an exit or the next stage of capitalization. We may syndicate funding, taking either a lead or follow-on position. When we lead, we take a Board Seat; when we follow, we or the other investors take a Board Seat to represent the interest of the investors. </p>
+		<p class = "over" style = "text-align: center;">...And take companies to the next level of funding</p>
+		<p>Our expertise lies in B2B and B2C tech companies. We will look at other business models but will invest only if we have advisors willing and capable of bringing the company to an exit or the next stage of capitalization. We may syndicate funding, taking either a lead or follow-on position. When we lead, we take a Board Seat; when we follow, we or the other investors take a Board Seat to represent the interest of the investors. </p>
 	</div>
 	
-	
-
-	
-	<section style = "background-color: #EEEEEE; padding-top: 5%; "id = "faq">
-		<h1 style = "margin-bottom: -8%;"> Sybilla Masters Fund FAQ </h1>
-		<div class="container accordion"> 
-  
-<div class="toggle">
-	<div class="toggle-title ">
-		<h3>
-		<i></i>
-		<span class="title-name">What is the Sybilla Masters Fund?</span>
-		</h3>
-	</div>
-	<div class="toggle-inner">
-		<p>A gender lens Venture Capital Fund chartered to support, fund, and champion high-potential technology-driven businesses with at least one woman on the founding team in a position of strategic and operational control. </p>
-	</div>
-	</div><!-- END OF TOGGLE -->
-	
-	
-	<div class="toggle">
-		<div class="toggle-title ">
-			<h3>
-			<i></i>
-			<span class="title-name">Can male founders apply? </span>
-			</h3>
-		</div>
-		
-		<div class="toggle-inner">
-			<p>Yes, so long as there is one woman in a position of strategic and operational control, appropriately titled and compensated. </p>
-		</div>
-		</div><!-- END OF TOGGLE -->
-		
-		<div class="toggle">
-			<div class="toggle-title  ">
-				<h3>
-				<i></i>
-				<span class="title-name"> What about ethnic, racial, age, or ability diversity? </span>
-				</h3>
-			</div>
-			
-			<div class="toggle-inner">
-				<p>We encourage diversity across all sectors, as increasing volumes of evidence demonstrate that it promotes resiliency and improved financial success. We have elected to focus on gender diversity, but we collaborate with, support, and syndicate funding with other Funds focused on many elements of human diversity, inclusion, and belonging in technology and entrepreneurship. </p>
-			</div>
-			
-			</div><!-- END OF TOGGLE -->
-			
-  
-  
-		<div class="toggle">
-			<div class="toggle-title  ">
-				<h3>
-				<i></i>
-				<span class="title-name">What is the business argument for gender diversity? </span>
-				</h3>
-			</div>
-			
-			<div class="toggle-inner">
-				<p>Numerous studies confirm that companies with diversity in the senior management team prove stronger and more sustainable in the market. First Round Capital’s Ten-Year Study reported that women led companies returned an average of 63% higher ROI to their portfolio. An increasing number of studies reports increased gross margins, reduced customer churn, improved corporate governance, less fraud and other legal entanglements, all of which results in improved investor returns in both private and public sectors. </p>
-			</div>
-			
-			</div><!-- END OF TOGGLE -->
-			
-  
-  
-		<div class="toggle">
-			<div class="toggle-title ">
-				<h3>
-				<i></i>
-				<span class="title-name">Why buck the traditional Venture Capital model? </span>
-				</h3>
-			</div>
-			
-			<div class="toggle-inner">
-				<p>The traditional Venture focuses on funding the software that will power the ‘next big thing.’ Today, the lion’s share of Venture Capital is being invested in IoT, blockchain, Augmented and Virtual Reality, and Artificial Intelligence. The process entails a large number of investments with the expectation that one or two successful exits will return outsized returns, covering the losses for twenty to forty or more unprofitable or inadequately profitable liquidity events. 80% - 90% of venture funding in the United States still goes to male, Caucasian founders, most of whom have attended Harvard or Stanford. 
- </br>
-With such a strong focus on such a small sub-group of founders and technologies, we believe that sector is over-invested and is prone to inflated valuations. The deal sourcing, investment premise, and funding process remain largely unchanged in venture capital for 25+ years. 
- </br>
-The Sybilla Masters Fund addresses these critical issues. In addition to funding potential ‘Unicorns’ in the technology sector, we invest in companies that demonstrate the ability to provide investors with shorter term 2 – 7x exits. We utilize equity, debt, revenue-sharing, and hybrid model investment instruments designed to meet the more complex business building opportunities and return higher ROI to our investors. 
+	<div class = "spacing blue">
+		<h1>Let's Reduce the Risk for Next Round Funding</h1>
+		<p>Angels and seed investors put capital into companies without knowing who will fund those companies at the next level and when. To reduce the risk of these early stage investments, we continue to establish and enhance relationships with later stage VCs. There will be companies that VC's want to fund but that are too early for them which they will send to us with a list specific benchmarks which need to be reached before they are ready to fund, as well as for companies we are considering. For each investment, we look for four to six VC's to express interest in each portfolio company to reduce the risk that the company will be unable to raise a next round.  
+ 
+</br><strong>Join Us!</strong> We welcome corporate, institutional, Private Family Offices, and individual Qualified Purchaser investors. Please <a href = "#contact">contact us </a> 
 </p>
-			</div>
-			
-			</div><!-- END OF TOGGLE -->
-			
-  
-  
-  
-		<div class="toggle">
-			<div class="toggle-title">
-				<h3>
-				<i></i>
-				<span class="title-name">What’s your investment rubric and engagement process?</span>
-				</h3>
-			</div>
-			
-			<div class="toggle-inner">
-				<p>Our intentional deal sourcing, stringent due diligence process, relevant funding vehicles, and strict tracking and reporting requirements increase success for both investors and founders. 
-				<ul>
-					<li>We optimize investor returns by seeking high quality deal flow in underinvested sectors and teams. </li>
-					<li>We structure investments for optimal value to both investors and entrepreneurs, providing short term smaller exits that power longer term ‘big win’ exits. </li>
-					<li>We partner with later stage VCs during our due diligence process and keep interested VCs informed at every benchmark. This establishes strong paths to Series B funding for our portfolio companies that require it. </li>
-				</ul>
-				</p>
-			</div>
-			
-			</div><!-- END OF TOGGLE -->
-			
-			
-  
-  		<div class="toggle">
-			<div class="toggle-title ">
-				<h3>
-				<i></i>
-				<span class="title-name">Who can invest?</span>
-				</h3>
-			</div>
-			
-			<div class="toggle-inner">
-				<p>Qualified individuals, wealth managers, and corporations. 
- </br>
-Join Us! We welcome corporate, institutional, Private Family Offices, and individual Qualified Purchaser investors. Please contact us [link to contact page] 
-</p>
-			</div>
-			
-			</div><!-- END OF TOGGLE -->
-  
-  
-		</div>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script type="text/javascript">
-if (jQuery(".toggle .toggle-title").hasClass("active")) {
-  jQuery(".toggle .toggle-title.active")
-    .closest(".toggle")
-    .find(".toggle-inner")
-    .show();
-}
-jQuery(".toggle .toggle-title").click(function() {
-  if (jQuery(this).hasClass("active")) {
-    jQuery(this)
-      .removeClass("active")
-      .closest(".toggle")
-      .find(".toggle-inner")
-      .slideUp(200);
-  } else {
-    jQuery(this)
-      .addClass("active")
-      .closest(".toggle")
-      .find(".toggle-inner")
-      .slideDown(200);
-  }
-});
-</script>
-
-	</section>
+	</div>
 	
-	<section style = "padding-top: -10%; padding-bottom: 5%;" id = "contact">
-	<h1 style = "padding-top: -10%;">Contact Us </h1>
+	<div  style = "padding-top: 5%;
+	padding-bottom: 5%;"class = "global container">
+		<div class = "row">
+		<div class = "col-md-2">
+			<img src = "images/global-data.svg" width = "120" height = "120" alt = "global logo">
+		</div>
+		<div class = "col-md-10">
+			<h1 style = "text-align: left;">Global Deal Flow</h1>
+			<p style = "text-align: left;">The most foolish reason to invest in a company is its address. Everyone laughs when we say this, but far too many investments are made from a very small ‘gene pool’ of companies within a small geographic area. Limiting deal flow to specific zip codes limits our opportunity to find the most valuable companies for the portfolio. By making connections with like-minded venture firms around the world, we share deal flow, due diligence, and syndicate funding with experts on the ground anywhere a brilliant company with high ROI prospects is found. </p>
+		</div>
+		</div>
+	</div>
+	
+	<div style = "
+	padding-bottom: 5%;"class = "money_in container">
+		<div class = "row">
+		<div class = "col-md-10">
+		<h1 style = "text-align: right;">Better Ways to Get Our Money in and Out</h1>
+		<p style = "text-align: right;">Traditional venture capital does a very good job of funding the software that powers the ‘next big thing.’ Venture Capitalists invest in companies that appear to be able to become the next unicorn. This space is overvalued and overinvested. Exits take an average of 11 – 16 years. Most investors can play that game twice in a lifetime. A common complaint of early stage investors is that their capital is tied up for more than a decade with no exit in sight. Even successful exits often return about the same ROI as a REIT. That’s insufficient for the risk of this asset class.</p>
+		</div>
+		<div class = "col-md-2">
+			<img src = "images/money-bag.svg" width = "120" height = "120" alt = "global logo">
+		</div>
+		</div>
+	</div>
+	
+	<div class = "spacing orange1">
+		<h1>Bet on Product Launches, not Companies </h1>
+		<p>With a debt instrument based on a revenue-share agreement, we can invest in companies that do not intend to sell or go public. Typical revenue-share investments return 2x – 4x in 3-5 years. Our risk is limited to the ability of the company to make sufficient sale such that our investment is repaid at a reasonable multiple from an agreed upon percentage of gross sales revenue. We are not betting on the long-term capability of a team to scale the company; neither must we wait for the company to have a liquidity event – sale or IPO, fro example -- to re-deploy our capital. </p>
+	</div>
+	
+	<!-- funding for interests of both section -->
+	<div style = "padding-top: 5%;
+	padding-bottom: 5%;" class = "container">
+		<h1>Funding for the Best Interests of Both Investors and Founders </h1>
+		<div style = "text-align: center; padding-top: 3%; padding-bottom: 3%;" class = "row">
+			<div class = "col-md-4 col-sm-4">
+				<img style = "width: 100px; height: 100px;" src = "images/funding.svg" alt = "dunding icon">
+				<h5 style = "font-size: 2 em;">Debt Funding</h5>
+				<p>a multiple of the investment paid in full from a percentage of revenues </p>
+			</div>
+			<div class = "col-md-4 col-sm-4">
+				<img style = "width: 100px; height: 100px;" src = "images/hybrid.svg" alt = "hybrid funding icon">
+				<h5 style = "font-size: 2 em;">Hybrid Funding</h5>
+				<p>a smaller multiple paid from first revenues with a small piece of equity remaining for the long term</p>
+			</div>
+			<div class = "col-md-4 col-sm-4">
+				<img style = "width: 100px; height: 100px;" src = "images/equity.svg" alt = "equity icon">
+				<h5 style = "font-size: 2 em;">Equity</h5>
+				<p>for those companies where we see a clear path to high-growth and Unicorn potential, we can offer traditional equity funding</p>
+			</div>
+		</div>
+		<p style = "text-align: center;">Founders benefit from a clean CAP table. We can include riders to be able to participate in follow on rounds, should the company reach a point of inflection indicating that equity funding is in order.</p>
+	</div>
+	
+	
+	
+	<section style = "padding-bottom: 5%;" id = "contact" class = "orange1">
+	<h1 style = "padding-top: 5%; padding-bottom: 3%;">Contact Us </h1>
 		<div class = "container contact">
 			<div class = "row">
 				<div style = "text-align: center;" class = "col-md-6 investors">
 					<h1>For Investors</h1>
 					<p>Join Us! We are changing the stars for female founders and their teams.
 					</br> We welcome corporate, institutional, private family office, and individual qualified investors.</p>
-					<button class = "btn btn-danger">Contact</button>
+					<button style = "border: solid 2px white;" class = "btn">Contact</button>
 				</div>
 				<div class = "col-md-6">
 					<h1> For Founders & Entrepreneurs </h1>
@@ -538,17 +485,17 @@ jQuery(".toggle .toggle-title").click(function() {
 							<li>unicorns in uncrowded spaces</li> 
 						</ul></p>
 						<p> If your company fits the above, please contact us using the form below.</p>
-					<div style = "text-align: center;"><button class = "btn btn-danger">Contact</button></div>
+					<div style = "text-align: center;"><button style = "border: solid 2px white; "class = "btn">Contact</button></div>
 				</div>
 			</div>	
 		</div>
 	</section>
 	
-<!-- footer 
+<!-- footer -->
 	<section id = "footer">
-		<div class="container-fluid navbar-fixed-bottom" id="contact-bar">
-  <p>SYBILLA MASTERS FUND | A global gender-lens investment fund | SEATTLE, PHILADELPHIA</p>
-  <div class = "table">
+		<div style = "text-align: center;" class="container-fluid navbar-fixed-bottom" id="contact-bar">
+  <p style = "text-align: center;">SYBILLA MASTERS FUND | A global gender-lens investment fund | SEATTLE, PHILADELPHIA</p>
+  <div style = "text-align: center;" class = "table">
   <ul class="list-inline text-center">
     <li>
       <a style = "display:inline;" href="https://www.linkedin.com/company/sybilla-masters-fund/"><i class="fab fa-linkedin"></i></a>
@@ -557,14 +504,14 @@ jQuery(".toggle .toggle-title").click(function() {
       <a style = "display:inline;"href="https://twitter.com/FundSybilla"><i class="fab fa-twitter"></i></a>
     </li>
     <li>
-      <a style = "display:inline;"href="partners@sybillamasters.com"><i class="fa fa-envelope"></i></a>
+      <a style = "display:inline;"href="mailto:partners@sybillamasters.com"><i class="fa fa-envelope"></i></a>
     </li>
     
   </ul>
   </div>
-  <p style = "font-style: italic;"> Copyright Sybilla Masters Fund. Website Copyright Q3, 2018. All rights reserved</p>
+  <p style = "font-style: italic; text-align: center;"> Copyright Sybilla Masters Fund. Website Copyright Q3, 2018. All rights reserved</p>
 </div>
 	</section>
   </body>
   
-  -->
+  
