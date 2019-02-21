@@ -218,19 +218,12 @@
 	</section>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script type="text/javascript">
-		$(".btn").click(function(){
-  $(".modal-window").addClass("visible");
-});
 
-$(".modal-close").click(function(){
-  $(".modal").removeClass("visible");
-});
-		$(document).click(function(event) {
-  //if you click on anything except the modal itself or the "open modal" link, close the modal
-  if (!$(event.target).closest(".modal-window,.btn").length) {
-    $("body").find(".modal-window").removeClass("visible");
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-});
+}
 	</script>
 	
 	
@@ -466,7 +459,7 @@ opportunity for higher ROI.</p>
 				<div class = "col-md-6" style = "text-align: center;">
 					<h1> For Founders & Entrepreneurs </h1>
 					<p>Sybilla Masters Fund is a gender lens investment fund seeking: </p>
-						<p><ul>
+						<p><ul style = "text-align: left;">
 							<li>diverse teams, with at least one woman in a position of strategic and operational control</li>
 							<li>global deal flow</li>
 							<li>unicorns in uncrowded spaces</li> 
