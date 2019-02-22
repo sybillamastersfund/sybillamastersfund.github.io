@@ -25,6 +25,9 @@ p {
 	
 }
 
+.about {
+	height:100%;
+}
 
 /*navbar */
 .nav {
@@ -65,18 +68,22 @@ p {
 
 .logo {
 	text-align: left;
-	padding-left: -20%;
+	position: relative;
 }
 
+.about {
+	padding-top: 40%;
+	padding-bottom: 80%;
+}
 
 /* alternating colors */
 
 .orange1 {
-	background-color: #F9E79F;
+	background-color: #FCF3CF;
 }
 
 .blue {
-	background-color: #D0ECE7;
+	background-color: #E8F6F3;
 }
 
 .purple {
@@ -90,7 +97,6 @@ p {
 	padding-top: 5%;
 	padding-bottom: 5%;
 	
-	
 }
 .history {
 	padding-top: 5%;
@@ -98,7 +104,7 @@ p {
 .more {
 	padding-left: 10%;
 	padding-right: 10%;
-	background-color: #D0ECE7;
+	background-color: #E8F6F3;
 }
 
 .spacing {
@@ -112,7 +118,7 @@ p {
 	padding-right: 10%;
 	padding-top: 5%;
 	padding-bottom: 5%;
-	background-color:#F9E79F;
+	background-color:#FCF3CF;
 }
 
 #process {
@@ -128,7 +134,7 @@ p {
 
 .modal-window {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   top: 0;
   right: 0;
   bottom: 0;
@@ -150,7 +156,7 @@ p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 2em;
-  background: #EAE8E8;
+  background: white;
   color: #333333;
 }
 .modal-window header {
@@ -234,14 +240,14 @@ h2 {
     
     /* Flexbox stuff */
     /*display: flex;*/
-    /*justify-content: center;
-    align-items: center;*/
+    justify-content: center;
+    align-items: center;
     
     /* Text styles */
     /*text-align: center;*/
 	
 	/* background styles */
-	background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('images/hero2.jpeg');
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/stock2.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -252,7 +258,10 @@ h2 {
 .hero h1 {
     /* Text styles */
     font-size: 4em;
+	font-weight:bold;
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
 	color: white;
+	padding-bottom: -10%;
     
     /* Margins */
     margin-top: 0;
